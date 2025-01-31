@@ -6,13 +6,13 @@ from pyrogram.types import InlineKeyboardMarkup, InlineKeyboardButton , Message
 @Client.on_message(filters.command("start") & filters.incoming) #type: ignore
 async def start(client:Client, message: Message):
     await message.reply_text( #type: ignore
-        f"**__Hello {message.from_user.first_name}__**\nThis boilerplate is made by @devdotpy",
+        f"**Hello 👋 {message.from_user.first_name}__**\nThis boilerplate is made by @VisualMovies1",
         reply_markup=InlineKeyboardMarkup(
             [
                 [
                     InlineKeyboardButton(
                         "Help",
-                        url="https://t.me/devdotpy"
+                        url="https://t.me/VisualMovies1"
                     ),
                     InlineKeyboardButton(
                         "Callback ping",
@@ -22,6 +22,6 @@ async def start(client:Client, message: Message):
             ]
         )
     )
-    msg = await message.reply_text("I will be deleted in 5 seconds") #type: ignore
-    await asyncio.sleep(5)
+    msg = await message.reply_text("I will be deleted in 10 seconds") #type: ignore
+    await asyncio.sleep(10)
     await msg.delete()
